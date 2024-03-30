@@ -19,6 +19,8 @@
 2. Install => npm install uploadthing @uploadthing/react react-dropzone
 3. get api keys from upload thing and paste it in your .env file.
 
-# Creating server
+/********\*\*********\*********\*\*********/
 
 1. npm install zustand = for modal
+2. For copy paste functionality => navigator.clipboard.writeText(inviteUrl);
+3. install another package :- npm i query-string
