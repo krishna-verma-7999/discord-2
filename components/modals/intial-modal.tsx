@@ -50,7 +50,11 @@ const InitialModal = () => {
 
   useEffect(() => {
     setIsMounted(true);
-  });
+  }, []);
+
+  if (isMounted === false) {
+    return;
+  }
 
   const isLoading = form.formState.isSubmitting;
 
@@ -60,6 +64,7 @@ const InitialModal = () => {
       form.reset();
       router.refresh();
       window.location.reload();
+      // window location reload reload the page and render to same url.
     } catch (error) {
       console.log(error);
     }

@@ -14,6 +14,7 @@ import { Check, Copy, RefreshCw } from "lucide-react";
 import { useOrigin } from "@/hooks/use-origin";
 import { useState } from "react";
 import axios from "axios";
+import { Server } from "@prisma/client";
 
 const InviteModal = () => {
   const { onOpen, isOpen, onClose, type, data } = useModal();

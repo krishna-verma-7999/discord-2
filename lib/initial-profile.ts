@@ -26,6 +26,5 @@ export const initialProfile = async () => {
       email: user.emailAddresses[0].emailAddress,
     },
   });
-  console.log("User has been created successfully");
   return newProfile;
 };

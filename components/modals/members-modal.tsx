@@ -100,11 +100,11 @@ const MemberModal = () => {
             Manage Members
           </DialogTitle>
           <DialogDescription className="text-center text-zinc-500">
-            {server?.members.length} Members
+            {server?.members?.length} Members
           </DialogDescription>
         </DialogHeader>
         <ScrollArea className="mt-8 max-h-[420px] pr-6">
-          {server?.members.map((member) => {
+          {server?.members?.map((member) => {
             const firstName = member.profile.name.split(" ")[0];
             const lastName = member.profile.name.split(" ")[1];
             return (
