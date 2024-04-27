@@ -6,6 +6,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { ModalProvider } from "@/components/providers/modal-provider";
 import { cn } from "@/lib/utils";
+import { SocketProvider } from "@/components/providers/socket-provider";
+import { QueryProvider } from "@/components/providers/query-provider";
 
 const open_sans = Open_Sans({ subsets: ["latin"] });
 
@@ -30,8 +32,10 @@ export default function RootLayout({
             enableSystem={true}
             storageKey="discord-theme"
           >
-            <ModalProvider />
-            {children}
+            <SocketProvider>
+              <ModalProvider />
+              <QueryProvider>{children}</QueryProvider>
+            </SocketProvider>
           </ThemeProvider>
         </body>
       </html>
